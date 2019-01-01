@@ -1,0 +1,8 @@
+Disp "PRESS KEYS FOR CODES"
+Disp "ENTER (105) TO QUIT"
+Repeat Ans=105
+getKey
+If Ans
+Disp Ans
+End
+

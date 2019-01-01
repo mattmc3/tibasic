@@ -1,0 +1,8 @@
+ClrHome
+Disp "VERTEX"
+Disp "-B/(2A)"
+Prompt A,B,C
+-B/(2A)→X
+AX^2+BX+C→Y
+Disp "(X,Y)",X,Y
+

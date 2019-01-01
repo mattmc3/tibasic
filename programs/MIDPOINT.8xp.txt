@@ -1,0 +1,12 @@
+ClrHome
+Disp "MIDPOINT FORMULA"
+Disp "(X1+X2)/2 AND (Y1+Y2)/2"
+Input "X1?",A
+Input "Y1?",B
+Input "X2?",C
+Input "Y2?",D
+(A+C)/2→E
+(B+D)/2→F
+Disp "X,Y MIDPOINT"
+Disp E
+Disp F

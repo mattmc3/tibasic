@@ -1,0 +1,34 @@
+ClrHome
+{31,28,31,30,31,30,31,31,30,31,30,31}→l1
+Lbl 1
+Input "YEAR?",Y
+Input "MONTH?",M
+Input "DAY?",D
+If M<0 or M>12:Then
+:Disp "BAD MONTH VAL"
+:Goto 1
+End
+If Y<0 or Y>9999:Then
+:Disp "BAD YEAR VAL"
+:Goto 1
+End
+If 2Y,4)=0 and (2Y,100)!=0 or 2Y,400)=0)
+Then
+:29→l1(2)
+End
+If D<1 or D>l1(M):Then
+:Disp "BAD DAY VAL"
+:Goto 1
+End
+If M<3
+Then
+:12+M→M
+:Y–1→Y
+End
+D+2M+int(3(M+1)/5)+Y+int(Y/4)–int(Y/100)+int(Y/400)+2→N
+2N,7)→X
+"SATURDAY  SUNDAY    MONDAY    TUESDAY   WEDNESDAY THURSDAY  FRIDAY    "→Str1
+Disp "DAY OF WEEK:"
+Disp sub(Str1,(10X)+1,10)
+Disp X
+Disp N

@@ -1,0 +1,8 @@
+ClrHome
+Disp "F(X)=A(X–H)^2+K"
+Input "VERTEX H?",H
+Input "VERTEX K?",K
+Input "POINT X?",X
+Input "POINT Y?",Y
+(Y–K)/((X–H)^2)→A
+Disp A

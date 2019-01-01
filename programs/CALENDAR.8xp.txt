@@ -1,0 +1,79 @@
+ClrHome
+getDate→l1
+l1(1)→Y
+l1(2)→M
+Goto 5
+Lbl 1
+ClrHome
+Input "YEAR?",Y
+Input "MONTH?",M
+Goto 5
+Lbl 2
+-1→Z
+Goto 4
+Lbl 3
+1→Z
+Lbl 4
+M+Z→M
+If M<1:Then
+12→M
+Y–1→Y
+Else:If M>12:Then
+1→M
+Y+1→Y
+End
+End
+Lbl 5
+"JANFEBMARAPRMAYJUNJULAUGSEPOCTNOVDEC"→Str1
+(M–1)*3→S
+sub(Str1,S+1,3)→Str2
+{31,28,31,30,31,30,31,31,30,31,30,31}→l1
+If 2Y,4)=0 and (2Y,100)!=0 or 2Y,400)=0):Then
+29→l1(2)
+End
+ClrHome
+Output(1,2,Y)
+Output(1,12,Str2)
+Output(1,21,Y)
+Output(2,4,"S  M  T  W  R  F  S")
+Output(10,1,"ARROWS NAVIGATE")
+Y→A
+M→B
+If B<3:Then
+12+B→B
+A–1→A
+End
+1+2B+int(3(B+1)/5)+A+int(A/4)–int(A/100)+int(A/400)+2→X
+2X,7)–1→X
+If X<0:Then
+6→X
+End
+3X+3→C
+3→R
+For I,1,l1(M))
+If I<10:Then
+1→P
+Else
+0→P
+End
+Output(R,C+P,I)
+C+3→C
+If C>21:Then
+3→C
+R+1→R
+End
+End
+For I,1,9)
+Disp ""
+0→K
+Repeat K>0
+getKey→K
+End
+If K=25
+Goto 1
+If K=24
+Goto 2
+If K=26
+Goto 3
+End
+

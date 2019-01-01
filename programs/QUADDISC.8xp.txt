@@ -1,0 +1,6 @@
+ClrHome
+Disp "QUADRATIC DISCRIMINANT"
+Disp "B^2–(4AC)"
+Prompt A,B,C
+B^2–(4AC)→D
+Disp D

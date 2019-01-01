@@ -1,0 +1,29 @@
+ClrHome
+Menu("PASCAL TRIANGLE","SHOW",1,"CALC",2,"EXIT",99)
+Lbl 1
+Disp "ROW 1–8"
+0→J
+0→K
+While K<8
+ClrList l1
+While J<=K
+K nCr J→l1(1+dim(l1))
+J+1→J
+End
+0→J
+1+K→K
+Disp l1
+End
+Goto 99
+Lbl 2
+Disp "CALC ROW"
+Input "ROW?",R
+R–1→R
+ClrList l1
+For I,0,R)
+R nCr I→l1(dim(l1)+1)
+End
+Disp l1
+Lbl 99
+Return
+

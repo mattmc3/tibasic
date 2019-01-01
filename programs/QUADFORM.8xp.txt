@@ -1,0 +1,9 @@
+ClrHome
+Disp "QUADRATIC FORMULA"
+Disp "(-B(+/–)sqrt(B^2–4AC))/(2A)"
+Prompt A,B,C
+(-B+sqrt(B^2–4AC))/(2A)→X
+(-B–sqrt(B^2–4AC))/(2A)→Y
+Disp "ANS +/–"
+Disp X
+Disp Y

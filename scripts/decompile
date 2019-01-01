@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# https://github.com/mattmc3/basically-ti-basic
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROGDIR="$( cd "$SCRIPTDIR/../programs" && pwd )"
+echo $PROGDIR
+find "$PROGDIR" -name '*.8xp' -exec basically-ti-basic -d -i "{}" -o "{}.txt" \;

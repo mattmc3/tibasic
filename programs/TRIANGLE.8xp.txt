@@ -1,0 +1,70 @@
+Degree:ClrHome
+Menu("TRIANGLE SOLVER","SSS",1,"SAS",2,"ASA",3,"AAS",4,"EXIT",99)
+Lbl 1
+{0,0,0,1,1,1}→l1
+Disp "SSS:"
+Input "SA?",D
+Input "SB?",E
+Input "SC?",F
+cos^-1((E^2+F^2–D^2)/(2EF))→A
+cos^-1((F^2+D^2–E^2)/(2FD))→B
+180–A–B→C
+Goto 99
+Lbl 2
+Disp "SAS:"
+{1,0,0,0,1,1}→l1
+Input "SB?",E
+Input "<A?",A
+Input "SC?",F
+sqrt((E^2+F^2–(2EF*cos(A))→D
+If E<F:Then
+sin^-1((sin(A)*E)/D)→B
+180–A–B→C
+Else
+sin^-1((sin(A)*F)/D)→C
+180–A–C→B
+End
+Goto 99
+Lbl 3
+Disp "ASA:"
+{1,1,0,0,0,1}→l1
+Input "<A?",A
+Input "SC?",F
+Input "<B?",B
+180–A–B→C
+(F/sin(C))*sin(A)→D
+(F/sin(C))*sin(B)→E
+Goto 99
+Lbl 4
+Disp "AAS:"
+{1,0,1,0,0,1}→l1
+Input "<A?",A
+Input "<C?",C
+Input "SC?",F
+180–A–C→B
+(F*sin(A))/sin(C)→D
+(F*sin(B))/sin(C)→E
+Goto 99
+Lbl 99
+ClrHome
+Output(1,1,"<A")
+Output(1,4,A)
+Output(2,1,"<B")
+Output(2,4,B)
+Output(3,1,"<C")
+Output(3,4,C)
+Output(4,1,"SA")
+Output(4,4,D)
+Output(5,1,"SB")
+Output(5,4,E)
+Output(6,1,"SC")
+Output(6,4,F)
+For I,1,6)
+:If l1(I)=1:Then
+::Output(I,3,":")
+:Else
+::Output(I,3,"=")
+:End
+:Disp ""
+End
+

@@ -1,0 +1,9 @@
+ClrHome
+Disp "DISTANCE FORMULA"
+Disp "sqrt((X1–X2)^2+(Y1–Y2)^2)"
+Input "X1?",A
+Input "Y1?",B
+Input "X2?",C
+Input "Y2?",D
+sqrt((A–C)^2+(B–D)^2)→E
+Disp E

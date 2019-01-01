@@ -1,0 +1,18 @@
+ClrHome
+Disp "RADICAL SIMPLIFIER"
+Disp "NTH ROOT OF X"
+Prompt N
+Prompt X
+X→B
+1→A
+2→I
+While I^N<=B
+:While not(fPart(B/I^N))
+::B/I^N→B
+::A*I→A
+:End
+:I+1+(I>2→I
+End
+Disp "Asqrt(B)"
+Disp A
+Disp B

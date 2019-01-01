@@ -1,0 +1,8 @@
+ClrHome
+Disp "Y=A(X–P)(X–Q)"
+Input "X INT1?",P
+Input "X INT2?",Q
+Prompt X,Y
+Y/((X–P)(X–Q))→A
+Disp "A"
+Disp A
